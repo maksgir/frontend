@@ -22,4 +22,7 @@ export class CategoriesComponent implements OnInit {
 
   }
 
+  showTasksByCategory(category: Category) {
+    this.service.getTasksByCategory(category);
+  }
 }
