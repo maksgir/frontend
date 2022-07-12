@@ -13,7 +13,9 @@ export class DataHandlerService {
 
   categorySubject = new BehaviorSubject<Category[]>(TestData.categories);
 
-  constructor() { }
+  constructor() {
+    this.fillTasks();
+  }
 
 
 
