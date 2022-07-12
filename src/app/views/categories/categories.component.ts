@@ -17,8 +17,7 @@ export class CategoriesComponent implements OnInit {
 
   //метод вызывается автоматически после инициализации компонента
   ngOnInit(): void {
-    this.categories = this.service.getCategories();
-    // console.log(this.categories);
+    this.service.categorySubject.subscribe(category => this.categories = category);
 
   }
 
