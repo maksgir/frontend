@@ -17,4 +17,8 @@ export class TaskComponent implements OnInit {
     this.service.taskSubject.subscribe(tasks => this.tasks = tasks);
   }
 
+  toggleTaskCompleted(task: Task){
+    task.completed = !task.completed;
+  }
+
 }
