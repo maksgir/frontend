@@ -1,10 +1,10 @@
 export class Priority{
-  id: number | undefined;
-  title: string | undefined;
-  color: string | undefined;
+  id: number;
+  title: string;
+  color: string;
 
 
-  constructor(id: number | undefined, title: string | undefined, color: string | undefined) {
+  constructor(id: number, title: string, color: string) {
     this.id = id;
     this.title = title;
     this.color = color;

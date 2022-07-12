@@ -1,26 +1,27 @@
 <div class="card">
   <div class="card-header card-header-primary">
     <h4 class="card-title">Tasks</h4>
-    <p class="card-category"></p>
   </div>
   <div class="card-body table-responsive">
     <table class="table table-hover">
       <thead class="text-warning">
-      <th>ID</th>
+      <th>#</th>
       <th>Название</th>
-      <th>Приоритет</th>
       <th>Категория</th>
+      <th>Приоритет</th>
       <th>Дедлайн</th>
       <th>Статус</th>
       </thead>
       <tbody>
-      <tr  *ngFor="let task of tasks">
-        <td>{{task.id}}</td>
+      <tr *ngFor="let task of tasks; let i = index">
+        <td>{{i+1}}</td>
         <td>{{task.title}}</td>
-        <td>приоритет</td>
-        <td>категория</td>
-        <td>дедлайн</td>
-        <td>статус</td>
+        <td>{{task.category != null? task.category.title: 'Без категории'}}</td>
+        <td>{{task.priority != null? task.priority.title: 'Без приоритета'}}</td>
+        <td>{{task.date != null? (task.date | date : 'medium'): 'Без даты'}}</td>
+        <td>
+
+        </td>
       </tr>
       </tbody>
     </table>
